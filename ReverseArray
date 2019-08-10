@@ -1,0 +1,16 @@
+import array
+def ReversArray(arr):
+    if len(arr) != None:
+        for i in range(len(arr)-1):
+            temp = arr[i]
+            arr[i] = arr[len(arr)-i-1]
+            arr[len(arr)-i-1] = temp
+            if(i >= (len(arr)-i-1)):
+                break
+    return arr
+    
+array = ReversArray(array.array("i",[1,2,3,4,5,6,7,8,9]))
+print(array)
+
+#Output
+#array('i', [9, 8, 7, 6, 5, 4, 3, 2, 1])
