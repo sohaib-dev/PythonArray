@@ -1,0 +1,18 @@
+import array
+
+def RotateArray(point, arr):
+    temp = array.array("i")
+    temp = arr[0:point]
+    print("Temporary Array : ",temp)
+    for i in range(point,len(arr)):
+        copiedIndex = i - point 
+        arr[copiedIndex] = arr[i]
+    arr[len(arr)-point : len(arr)] = temp
+    return arr
+    
+rotatedArray = RotateArray(2, array.array("i",[1,2,3,4,5]))
+print("Rotated Array : ",rotatedArray)
+
+#Output
+#Temporary Array :  array('i', [1, 2])
+#Rotated Array :  array('i', [3, 4, 5, 1, 2])
