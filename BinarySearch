@@ -1,0 +1,25 @@
+import array
+
+def BinarySearch(arr,NumSearch):
+    if len(arr) ==  0:
+        return arr
+    else:
+        length = len(arr)
+        print(arr)    
+        
+        if(arr[int(length/2)] == NumSearch):
+            return arr[int(length/2)]
+ 
+        elif(arr[int(length/2)] > NumSearch):   
+            return BinarySearch(arr[0:int(length/2)],NumSearch)
+        
+        elif(arr[int(length/2)] < NumSearch):    
+            return BinarySearch(arr[int(length/2)+1:length],NumSearch)
+        else:
+            return None
+
+num = BinarySearch(array.array("i",[1,2,3,4,5,6,7,8]),1)
+print(num)
+
+#Space Complexity : O(logn)
+#Time Compexity : O(logn)
