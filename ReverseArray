@@ -1,6 +1,6 @@
 import array
 def ReversArray(arr):
-    if len(arr) != None:
+    if len(arr) != 0:
         for i in range(len(arr)-1):
             temp = arr[i]
             arr[i] = arr[len(arr)-i-1]
